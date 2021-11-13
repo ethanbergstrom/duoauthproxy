@@ -8,6 +8,6 @@ $latesttag = "${imagename}:latest"
 
 podman build . --build-arg URI=$uri -t $versiontag
 
-podman login docker.io -u calan89 -p $env:DOCKER_KEY
+podman login docker.io -u $username -p $env:DOCKER_KEY
 podman push $versiontag docker://docker.io/$versiontag
 podman push $versiontag docker://docker.io/$latesttag
